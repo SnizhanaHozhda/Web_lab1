@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Гожда Сніжана">
+    <title>Новини — PC_STORE</title>
+
+    <!-- Тег <style> з атрибутами: media, type -->
+    <style type="text/css" media="all">
+    </style>
+</head>
+<body bgcolor="#f5f0eb" text="#2d241e">
+
+    <!-- Тег <header> з атрибутами: class, id -->
+    <header class="site-header" id="header-main">
+
+        <p align="center">
+            <b>
+                <a href="index.html">Головна (Про фірму)</a> | 
+                <a href="author.html">Про автора</a> | 
+                <a href="news.html">Новини</a>
+            </b>
+        </p>
+
+        <hr size="4" align="center" color="#8c684d">
+
+        <h1 align="center"><font color="#4a3525">Новини магазину «PC_STORE»</font></h1>
+
+    </header>
+
+    <div id="content-wrapper" style="margin: 20px;">
+
+        <!-- Тег <article> з атрибутами: class, style -->
+        <article class="news-post" style="background-color: #ebdcd0;">
+            
+            <h2><font color="#4a3525">Гарячі знижки на проци Intel Core i7 та SSD!</font></h2>
+
+            <p>
+                Стара ціна на SSD накопичувач: 
+                <del lang="uk" style="color: #8c684d;" id="old-price">4000 грн</del><br>
+                
+                Нова ціна: 
+                <ins datetime="2026-09-15" lang="uk"><b>3200 грн</b></ins>
+                
+                <sub id="promo-tag" class="badge"><font color="#8c684d">*акція</font></sub>
+            </p>
+
+            <p>
+                Потужність нових процесорів зросла до 10 
+                <sup lang="uk"><b>покоління</b></sup>
+            </p>
+
+          
+
+            <p>
+                Азійський партнер проєкту: 
+                <ruby style="font-size: 18px;" id="partner-ruby">
+                    Tech <rt>テック</rt>
+                </ruby>
+            </p>
+
+
+            <p align="center">
+                <img src="банер_новин.png" 
+                     vspace="10" 
+                     height="180" 
+                     id="news-banner-img" 
+                     class="responsive-banner" 
+                     usemap="#news-map" 
+                     alt="Баннер новини">
+            </p>
+
+            <map name="news-map" tabindex="1" onblur="console.log('blur')" accesskey="m" style="display:inline;" target="_self">
+                <area href="index.html" shape="rect" coords="0,0,900,180" lang="uk" alt="Перехід на головну">
+            </map>
+
+            <p align="right">
+                <span id="banner-link-text" title="Клацніть на зображення">
+                    <a href="index.html"><b>Каталог товарів PC_STORE &rarr;</b></a>
+                </span>
+            </p>
+
+        </article>
+
+        <br>
+
+        <aside class="sidebar-news" id="side-panel">
+            
+           
+</body>
+</html>
