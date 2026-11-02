@@ -4,136 +4,193 @@
     <meta charset="UTF-8">
     <meta name="author" content="Гожда Сніжана">
     <title>TechParts — Комп'ютерні аксесуари</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body bgcolor="#f5f0eb" text="#2d241e"></body>
+<body bgcolor="#f5f0eb" text="#2d241e">
 
+    <div class="nav-menu">
     <p align="center">
-        <b>
-            <a href="index.html">Головна (Про фірму)</a> | 
-            <a href="author.html">Про автора</a> | 
-            <a href="news.html">Новини</a>
-        </b>
+        <a href="index.html">Головна (Про фірму)</a> | 
+        <a href="author.html">Про автора</a> | 
+        <a href="news.html">Новини</a> |
+        <a href="menu.html" style="color: #6b4c35;">Меню</a>
     </p>
-
+</div>
     <hr size="4" align="center" color="#003366">
 
-    <h1 align="center"><font face="Arial" color="#003366">Інтернет-магазин «PC_STORE»</font></h1>
+ 
+    <div class="content-wrapper" data-role="main-content">
 
-    <p align="center">
-        <cite id="quote-source" title="Гасло компанії">"PC_STORE — ваш надійний провідник у світ комп'ютерних технологій"</cite>
-    </p>
+ 
+        <section>
 
-    <p>
-        <dfn lang="uk" class="definition-term">PC_STORE</dfn> — це провідний магазин комп'ютерної техніки та комплектуючих.
-    </p>
+            <header class="site-header">
+        <h1 align="center"><font face="Arial" color="#003366">Інтернет-магазин «PC_STORE»</font></h1>
+        <p align="center">
+            <cite id="quote-source" title="Гасло компанії">"PC_STORE — ваш надійний провідник у світ комп'ютерних технологій!"</cite>
+        </p>
+    </header>
 
-    <p>
-        Ми реалізуємо лише якісну комплектацію для <abbr lang="uk" class="abbreviation">ПК</abbr> (персональних комп'ютерів).
-    </p>
+            <p>
+                <dfn lang="uk" class="definition-term">PC_STORE</dfn> — це провідний магазин комп'ютерної техніки та комплектуючих.
+            </p>
 
-    <p align="center">
-        <img src="banner.jpg" 
-             usemap="#accessory-map" 
-             style="width: 80%; max-width: 900px; height: 280px; object-fit: cover; border: 3px solid #003366; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);"
-             title="Банер магазину PC_STORE" 
-             lang="uk" 
-             dir="ltr" 
-             alt="Баннер магазину"> 
-    </p>
+            <p>
+                Ми реалізуємо лише якісну комплектацію для <abbr lang="uk" class="abbreviation">ПК</abbr> (персональних комп'ютерів).
+            </p>
+
+            <p align="center" /*class="clipped-element"*/>
+                <img src="banner.jpg" 
+                     usemap="#accessory-map" 
+                     style="width: 80%; max-width: 900px; height: 280px; object-fit: cover; border: 3px solid #003366; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);"
+                     title="Банер магазину PC_STORE" 
+                     lang="uk" 
+                     dir="ltr" 
+                     alt="Баннер магазину">
+
+            </p>
+            <p>
+                За словами експертів: 
+                <q dir="ltr" style="color: #003366; font-style: italic;" title="Цитата фахівця">Якісний процесор та SSD — запорука швидкої роботи системи.</q>
+            </p>
+
+            <p>
+                У нашому асортименті представлено <em title="Акцентуємо увагу" id="important-text">найпотужніші процесори</em>, сучасні монітори та надійні вінчестери.   
 
 
-    <p>
-        За словами експертів: 
-        <q dir="ltr" style="color: #003366; font-style: italic;" title="Цитата фахівця">Якісний процесор та SSD — запорука швидкої роботи системи.</q>
-    </p>
-
-    <p>
-        У нашому асортименті представлено <em title="Акцентуємо увагу" id="important-text">найпотужніші процесори</em>, сучасні монітори та надійні вінчестери.   
-    </p>
+            </p>
 
 
 
-    <h3 align="center" style="color: #003366; text-transform: uppercase;" title="Розділ прайс-листа">КАТАЛОГ ТОВАРІВ</h3>
+            <h3 align="center" style="color: #003366; text-transform: uppercase;" title="Розділ прайс-листа">КАТАЛОГ ТОВАРІВ</h3>
 
-    <hr size="2" align="center" color="#003366">
+            <hr size="2" align="center" color="#003366">
 
-   
-    <div style="margin-left: 10px;">
-    
-        <h4 style="color: #003366; font-size: 20px; border-bottom: 2px solid #003366; padding-bottom: 5px;" dir="ltr" align="left">1. Процесори </h4>
+            <div style="margin-left: 10px;">
+            
+                <h4 style="color: #003366; font-size: 20px; border-bottom: 2px solid #003366; padding-bottom: 5px;" dir="ltr" align="left">1. Процесори</h4>
 
-     
+             <div class="catalog-section">
+
+
+
+
+    <!-- Товар 1.1 -->
+    <div class="product-card">
         <p style="clear: both; margin: 10px 0;" dir="ltr" align="left">
             <img src="процесор1.webp" style="width: 150px; height: 150px; object-fit: cover; float: left; margin-right: 15px;" alt="Intel Core i3">
             <b style="color: #00251a; font-size: 16px;" title="Процесор 1">1.1. Процесор Intel Core i3-13100F</b> — 4 200 грн<br>
             <span>Характеристики: Десктопний, виробник: Intel, тактова частота: 3.4 GHz</span>
+            <a href="https://intel.com" rel="external" target="_blank">Офіційний сайт Intel</a>
         </p>
         <br clear="all" style="display: block;" title="Розділювач">
+    </div>
 
+    <!-- Товар 1.2 (ТЕПЕР ОГОРНУТИЙ У product-card) -->
+    <div class="product-card">
         <p style="clear: both; margin: 10px 0;" dir="ltr" align="left">
             <img src="процесор2.webp" style="width: 150px; height: 150px; object-fit: cover; float: left; margin-right: 15px;" alt="Intel Core i5">
             <u dir="ltr" class="product-name" style="color: #00251a; font-weight: bold; font-size: 16px; text-decoration: none;">1.2. Процесор Intel Core i5-13400F</u> — 8 400 грн<br>
             <span>Характеристики: Десктопний, виробник: Intel, тактова частота: 2.5 GHz</span>
         </p>
         <br clear="all" style="display: block;" title="Розділювач">
+    </div>
 
+    <!-- Товар 1.3 (ОСТАННЯ КАРТКА — ОТРЕМАЄ РАМКУ) -->
+    <div class="product-card">
         <p style="clear: both; margin: 10px 0;" dir="ltr" align="left">
             <img src="процесор3.webp" style="width: 150px; height: 150px; object-fit: cover; float: left; margin-right: 15px;" alt="AMD Ryzen 7">
             <b style="color: #00251a; font-size: 16px;" title="Процесор 3">1.3. Процесор AMD Ryzen 7 7800X3D</b> — 16 900 грн<br>
             <span>Характеристики: Десктопний, виробник: AMD, тактова частота: 4.2 GHz</span>
         </p>
         <br clear="all" style="display: block;" title="Розділювач">
+    </div>
+
+</div> <!-- ЗАКРИВАЄМО catalog-section ЛИШЕ ПІСЛЯ ТРЕТЬОГО ТОВАРА -->
+
+                <h4 style="color: #003366; font-size: 20px; border-bottom: 2px solid #003366; padding-bottom: 5px; margin-top: 25px;" dir="ltr" align="left">3. Вінчестери </h4>
+
+                <p style="clear: both; margin: 10px 0;" dir="ltr" align="left">
+                    <img src="вінчестер1.webp" style="width: 150px; height: 150px; object-fit: cover; float: left; margin-right: 15px;" alt="SSD Kingston">
+                    <b style="color: #00251a; font-size: 16px;" title="Вінчестер 1">3.1. Накопичувач SSD Kingston NV2</b> — 2 400 грн<br>
+                    <span>Характеристики: Накопичувач SSD M.2, виробник: Kingston, об'єм: 500 GB</span>
+                </p>
+                <br clear="all" style="display: block;" title="Розділювач">
+
+                <p style="clear: both; margin: 10px 0;" dir="ltr" align="left">
+                    <img src="вінчестер2.webp" style="width: 150px; height: 150px; object-fit: cover; float: left; margin-right: 15px;" alt="SSD Samsung">
+                    <b style="color: #00251a; font-size: 16px;" title="Вінчестер 2">3.2. Накопичувач SSD Samsung 980 Pro</b> — 4 800 грн<br>
+                    <span>Характеристики: Накопичувач SSD NVMe, виробник: Samsung, об'єм: 1 TB</span>
+                </p>
+                <br clear="all" style="display: block;" title="Розділювач">
+
+                <p style="clear: both; margin: 10px 0;" dir="ltr" align="left">
+                    <img src="вінчестер3.webp" style="width: 150px; height: 150px; object-fit: cover; float: left; margin-right: 15px;" alt="HDD WD">
+                    <b style="color: #00251a; font-size: 16px;" title="Вінчестер 3">3.3. Жорсткий диск WD Blue HDD</b> — 2 100 грн<br>
+                    <span>Характеристики: Жорсткий диск HDD 3.5", виробник: Western Digital, об'єм: 2 TB</span>
+                </p>
+                <br clear="all" style="display: block;" title="Розділювач">
+
+            </div>
+
+             <div style="margin: 20px 0;">
+    <label for="search">Пошук товарів: </label>
+    <input type="text" id="search" placeholder="Наприклад: Intel Core i5">
+</div>
+
+<div style="margin: 20px 0;">
+    <label for="promo">Промокод (тимчасово недоступно): </label>
+    <input type="text" id="promo" placeholder="Промокод..." disabled>
+</div>
+
+<article class="product-review product-card">
+            <h4>Огляд відеокарти RTX 4070</h4>
+            <p>Потужна відеокарта для ігор у 1440p...</p>
+        </article>
+
+        <p style="display: inline-block;">
+        <img src="процесор1.webp" alt="icon" style="height: 50px;">
+        <span style="display: inline-block;">Цей текст вирівняно по верхньому краю картинки!</span>
+    </p>
 
 
-        <h4 style="color: #003366; font-size: 20px; border-bottom: 2px solid #003366; padding-bottom: 5px; margin-top: 25px;" dir="ltr" align="left">2. Монітори </h4>
+<div class="css-table-container">
+    <!-- Заголовок таблиці -->
+    <div class="css-table-caption">Порівняння характеристик ПК</div>
 
-        <p style="clear: both; margin: 10px 0;" dir="ltr" align="left">
-            <img src="монітор1.webp" style="width: 150px; height: 150px; object-fit: cover; float: left; margin-right: 15px;" alt="Монітор Samsung">
-            <b style="color: #00251a; font-size: 16px;" title="Монітор 1">2.1. Монітор Samsung Odyssey G3</b> — 6 500 грн<br>
-            <span>Характеристики: Ігровий VA, виробник: Samsung, частота: 144 Hz</span>
-        </p>
-        <br clear="all" style="display: block;" title="Розділювач">
+    <!-- Шапка -->
+    <div class="css-table-header">
+        <div class="css-table-row">
+            <div class="css-table-cell"><b>Модель</b></div>
+            <div class="css-table-cell"><b>Процесор</b></div>
+            <div class="css-table-cell"><b>Ціна</b></div>
+        </div>
+    </div>
 
-        <p style="clear: both; margin: 10px 0;" dir="ltr" align="left">
-            <img src="монітор2.webp" style="width: 150px; height: 150px; object-fit: cover; float: left; margin-right: 15px;" alt="Монітор ASUS">
-            <b style="color: #00251a; font-size: 16px;" title="Монітор 2">2.2. Монітор ASUS TUF Gaming</b> — 9 200 грн<br>
-            <span>Характеристики: Ігровий IPS, виробник: ASUS, частота: 165 Hz</span>
-        </p>
-        <br clear="all" style="display: block;" title="Розділювач">
+    <!-- Основне тіло -->
+    <div class="css-table-body">
+        <div class="css-table-row">
+            <div class="css-table-cell">PC_STORE Basic</div>
+            <div class="css-table-cell">Intel Core i3</div>
+            <div class="css-table-cell">15 000 грн</div>
+        </div>
+        <div class="css-table-row">
+            <div class="css-table-cell">PC_STORE Ultra</div>
+            <div class="css-table-cell">Intel Core i7</div>
+            <div class="css-table-cell">45 000 грн</div>
+        </div>
+    </div>
+</div>
 
-        <p style="clear: both; margin: 10px 0;" dir="ltr" align="left">
-            <img src="монітор3.webp" style="width: 150px; height: 150px; object-fit: cover; float: left; margin-right: 15px;" alt="Монітор LG">
-            <b style="color: #00251a; font-size: 16px;" title="Монітор 3">2.3. Монітор LG UltraGear 27GP850</b> — 14 500 грн<br>
-            <span>Характеристики: Професійний Nano IPS, виробник: LG, частота: 180 Hz</span>
-        </p>
-        <br clear="all" style="display: block;" title="Розділювач">
 
-
-        <h4 style="color: #003366; font-size: 20px; border-bottom: 2px solid #003366; padding-bottom: 5px; margin-top: 25px;" dir="ltr" align="left">3. Вінчестери </h4>
-
-        <!-- Товар 3.1 -->
-        <p style="clear: both; margin: 10px 0;" dir="ltr" align="left">
-            <img src="вінчестер1.webp" style="width: 150px; height: 150px; object-fit: cover; float: left; margin-right: 15px;" alt="SSD Kingston">
-            <b style="color: #00251a; font-size: 16px;" title="Вінчестер 1">3.1. Накопичувач SSD Kingston NV2</b> — 2 400 грн<br>
-            <span>Характеристики: Накопичувач SSD M.2, виробник: Kingston, об'єм: 500 GB</span>
-        </p>
-        <br clear="all" style="display: block;" title="Розділювач">
-
-        <p style="clear: both; margin: 10px 0;" dir="ltr" align="left">
-            <img src="вінчестер2.webp" style="width: 150px; height: 150px; object-fit: cover; float: left; margin-right: 15px;" alt="SSD Samsung">
-            <b style="color: #00251a; font-size: 16px;" title="Вінчестер 2">3.2. Накопичувач SSD Samsung 980 Pro</b> — 4 800 грн<br>
-            <span>Характеристики: Накопичувач SSD NVMe, виробник: Samsung, об'єм: 1 TB</span>
-        </p>
-        <br clear="all" style="display: block;" title="Розділювач">
-
-        <p style="clear: both; margin: 10px 0;" dir="ltr" align="left">
-            <img src="вінчестер3.webp" style="width: 150px; height: 150px; object-fit: cover; float: left; margin-right: 15px;" alt="HDD WD">
-            <b style="color: #00251a; font-size: 16px;" title="Вінчестер 3">3.3. Жорсткий диск WD Blue HDD</b> — 2 100 грн<br>
-            <span>Характеристики: Жорсткий диск HDD 3.5", виробник: Western Digital, об'єм: 2 TB</span>
-        </p>
-        <br clear="all" style="display: block;" title="Розділювач">
+        </section>
+        <!-- КІНЕЦЬ СЕКЦІЇ -->
 
     </div>
+    <!-- КІНЕЦЬ ОБГОРТКИ CONTENT-WRAPPER -->
+
+
 
     <address style="color: #00251a; font-style: normal; margin-top: 25px;" dir="ltr">
         <b>Контакти фірми:</b><br>

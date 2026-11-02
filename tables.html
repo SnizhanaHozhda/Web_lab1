@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Таблиці — PC_STORE</title>
+  <link rel="stylesheet" type="text/css" href="tables.css">
+</head>
+<body>
+
+<nav id="top-nav">
+  <a href="menu.html" style="font-weight:bold;">☰ Меню</a>
+  <a href="#t-catalog">Каталог</a>
+  <a href="#t-variant">Таблиця варіанту №6</a>
+  <a href="#t-css">Таблиці через CSS</a>
+</nav>
+
+<main class="content">
+
+  <h1>Інтернет-магазин «PC_STORE»: таблиці</h1>
+
+  <section id="t-catalog">
+    <h2>Таблиця 1. Каталог комплектуючих</h2>
+
+    <table class="catalog" border="1" cellpadding="6" width="100%">
+      <caption>Таблиця 1. Каталог комплектуючих PC_STORE</caption>
+      <colgroup>
+        <col style="width:6%">
+        <col style="width:34%">
+        <col style="width:20%">
+        <col style="width:14%">
+        <col style="width:26%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">№</th>
+          <th scope="col">Назва товару</th>
+          <th scope="col">Категорія</th>
+          <th scope="col">Ціна, грн</th>
+          <th scope="col">Примітка</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Intel Core i5-12400F</td>
+          <td>Проц</td>
+          <td align="right">6 450</td>
+          <td>Є кулер у комплекті</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>MSI GeForce RTX 4060</td>
+          <td>Відеок</td>
+          <td align="right">13 900</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Kingston FURY 16 ГБ DDR4</td>
+          <td>Оперпам'ять</td>
+          <td align="right">1 850</td>
+          <td>Набір 2×8 ГБ</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Samsung 990 EVO Plus 2 ТБ</td>
+          <td>Накоп</td>
+          <td align="right">7 200</td>
+          <td></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="3" scope="row">Загальна вартість усіх позицій</th>
+          <td align="right">29 400</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <section id="t-variant">
+    <h2>Таблиця 2. Структура за варіантом №6</h2>
+
+    <table class="variant" id="variant-table" border="1" cellpadding="5" width="100%">
+      <caption>Таблиця 2. Комерційні параметри та наявність комплектуючих</caption>
+
+      <colgroup>
+        <col class="c-cat">
+        <col class="c-num">
+        <col class="c-name">
+        <col class="c-brand">
+        <col class="c-par" span="5">
+      </colgroup>
+
+      <thead>
+        <tr>
+          <th rowspan="3" scope="col">Кате&shy;горія</th>
+          <th rowspan="3" scope="col">№</th>
+          <th rowspan="3" scope="col">Назва товару</th>
+          <th colspan="6" scope="colgroup">Характеристики товару</th>
+        </tr>
+        <tr>
+          <th rowspan="2" scope="col">Виробник</th>
+          <th colspan="5" scope="colgroup">Комерційні параметри</th>
+        </tr>
+        <tr>
+          <th scope="col">Ціна, грн</th>
+          <th scope="col">Гарантія, міс.</th>
+          <th scope="col">На складі, шт.</th>
+          <th scope="col">Рейтинг</th>
+          <th scope="col">Знижка</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th rowspan="3" scope="rowgroup" class="cat">Процесори</th>
+          <td>1</td>
+          <td class="name">Intel Core i5-12400F</td>
+          <td>Intel</td>
+          <td>6 450</td>
+          <td>36</td>
+          <td>24</td>
+          <td>4,8</td>
+          <td>5%</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="name">AMD Ryzen 7 9700X</td>
+          <td>AMD</td>
+          <td>14 200</td>
+          <td>36</td>
+          <td>7</td>
+          <td colspan="2" class="msg">Новинка, оцінок ще немає</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="name">Intel Core i9-14900K</td>
+          <td>Intel</td>
+          <td>21 800</td>
+          <td>36</td>
+          <td colspan="3" class="msg">Немає в наявності</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th rowspan="3" scope="rowgroup" class="cat">Відеокарти</th>
+          <td>4</td>
+          <td class="name">NVIDIA GeForce RTX 4060</td>
+          <td>MSI</td>
+          <td>13 900</td>
+          <td>36</td>
+          <td>12</td>
+          <td>4,7</td>
+          <td>7%</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="name">AMD Radeon RX 9070 XT</td>
+          <td>Sapphire</td>
+          <td>29 500</td>
+          <td>36</td>
+          <td>4</td>
+          <td colspan="2" class="msg">Новинка, оцінок ще немає</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td class="name">NVIDIA GeForce RTX 4090</td>
+          <td>ASUS</td>
+          <td>89 900</td>
+          <td>36</td>
+          <td colspan="3" class="msg">Немає в наявності</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th rowspan="3" scope="rowgroup" class="cat">Накопичувачі</th>
+          <td>7</td>
+          <td class="name">Kingston FURY Renegade 1 ТБ</td>
+          <td>Kingston</td>
+          <td>3 800</td>
+          <td>60</td>
+          <td>40</td>
+          <td>4,9</td>
+          <td>10%</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td class="name">Samsung 9100 PRO 2 ТБ</td>
+          <td>Samsung</td>
+          <td>11 900</td>
+          <td>60</td>
+          <td>6</td>
+          <td colspan="2" class="msg">Новинка, оцінок ще немає</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td class="name">WD Black SN850X 4 ТБ</td>
+          <td>Western Digital</td>
+          <td>16 500</td>
+          <td>60</td>
+          <td colspan="3" class="msg">Немає в наявності</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <th scope="row">Σ</th>
+          <td>9</td>
+          <td class="name">Усього позицій / у середньому</td>
+          <td>8 виробників</td>
+          <td>сер. 23 106</td>
+          <td>сер. 44</td>
+          <td>93</td>
+          <td>сер. 4,8</td>
+          <td>сер. 7%</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  

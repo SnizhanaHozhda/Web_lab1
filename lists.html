@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Списки — PC_STORE</title>
+  <link id="main-css" rel="stylesheet" type="text/css" media="screen" href="lists.css" style="display:none">
+</head>
+<body>
+
+<nav id="top-nav">
+  <a id="menu-link" href="menu.html" target="_self" rel="contents" type="text/html" shape="rect" style="font-weight:bold;">☰ Меню</a>
+  <a href="#ul-block">Маркеровані списки</a>
+  <a href="#ol-block">Нумеровані списки</a>
+  <a href="#dl-block">Визначення</a>
+</nav>
+
+<main class="content">
+
+  <h1>Інтернет-магазин «PC_STORE»</h1>
+  <p><nobr id="slogan">PC_STORE — ваш надійний провідник у світ комп'ютерних технологій!</nobr></p>
+
+  <section id="ul-block">
+    <h2>Маркеровані списки</h2>
+
+    <h3>Категорії товарів </h3>
+    <ul type="circle">   <!--list-style-type-->
+      <li style="color:#6b4c35;" lang="uk">Процесори (CPU)</li>
+      <li style="color:#6b4c35;" lang="uk">Відеокарти (GPU)</li>
+      <li style="color:#6b4c35;" lang="uk">Оперативна пам'ять (RAM)</li>
+      <li style="color:#6b4c35;" lang="uk">Накопичувачі (SSD / HDD)</li>
+      <li style="color:#6b4c35;" lang="uk">Монітори</li>
+      <li style="color:#6b4c35;" lang="uk">Периферія та аксесуари</li>
+    </ul>
+
+    <h3>Бренди, з якими ми працюємо</h3>
+    <ul type="disc" start="1">  <!--list-style-type-->
+      <li style="color:#4a3525;" lang="en">Intel</li>
+      <li style="color:#4a3525;" lang="en">AMD Ryzen</li>
+      <li style="color:#4a3525;" lang="en">NVIDIA GeForce</li>
+      <li style="color:#4a3525;" lang="en">Kingston FURY</li>
+    </ul>
+  </section>
+
+  <section id="ol-block">
+    <h2>Нумеровані списки</h2>
+
+    <h3>Як зробити замовлення </h3>
+    <ol id="order-steps" class="steps" type="5" compact>
+      <li style="font-weight:bold;" compact lang="uk">Оберіть потрібні комплектуючі в каталозі</li>
+      <li style="font-weight:bold;" compact lang="uk">Додайте товари до кошика</li>
+      <li style="font-weight:bold;" compact lang="uk">Вкажіть дані для доставки</li>
+      <li style="font-weight:bold;" compact lang="uk">Оберіть спосіб оплати</li>
+      <li style="font-weight:bold;" compact lang="uk">Підтвердіть замовлення та очікуйте доставку</li>
+    </ol>
+
+    <h3>Способи доставки </h3>
+    <ol id="delivery" class="depts" type="A" compact>
+      <li style="font-style:italic;" lang="uk">Нова пошта (відділення)</li>
+      <li style="font-style:italic;" lang="uk">Нова пошта (кур'єр)</li>
+      <li style="font-style:italic;" lang="uk">Укрпошта</li>
+      <li style="font-style:italic;" lang="uk">Самовивіз зі складу</li>
+    </ol>
+  </section>
+
+  <section id="dl-block">
+    <h2>Список визначень</h2>
+    <dl id="terms" dir="ltr">
+      <dt id="term-1" style="color:#6b4c35;">CPU (процесор)</dt>
+      <dd>Центральний процесор — основний обчислювальний елемент комп'ютера, що виконує програмні інструкції.</dd>
+
+      <dt id="term-2" style="color:#6b4c35;">GPU (відеокарта)</dt>
+      <dd>Графічний процесор, що відповідає за обробку зображення, ігор та графічних обчислень.</dd>
+
+      <dt id="term-3" style="color:#6b4c35;">RAM (оперативна пам'ять)</dt>
+      <dd>Швидка тимчасова пам'ять, у якій зберігаються дані запущених програм.</dd>
+
+      <dt id="term-4" style="color:#6b4c35;">SSD</dt>
+      <dd>Твердотільний накопичувач без рухомих частин, який працює швидше за класичний жорсткий диск (HDD).</dd>
+    </dl>
+  </section>
+
+  <section id="extra-block">
+    <h2>Контекстне меню та команди</h2>
+    <menu type="list">
+      <menuitem class="mi" style="color:green;" lang="uk" label="Додати до кошика"></menuitem>
+      <menuitem class="mi" style="color:green;" lang="uk" label="Порівняти товар"></menuitem>
+      <command style="color:gray;" checked="checked" title="Команда за замовчуванням" label="Оновити каталог"></command>
+    </menu>
+   
+  </section>
+
+  <menu>
+  <li><button type="button" onclick="alert('Товар додано до кошика')">Додати до кошика</button></li>
+  <li><button type="button" onclick="alert('Товар додано до порівняння')">Порівняти товар</button></li>
+</menu>
+
+<label>
+  <input type="checkbox" checked title="Команда за замовчуванням"> Оновити каталог
+</label>
+
+  <p><a href="menu.html" id="back-menu" target="_self" rel="contents" type="text/html" shape="rect" style="font-weight:bold;">← Перейти до сторінки меню</a></p>
+
+</main>
+
+</body>
+</html>

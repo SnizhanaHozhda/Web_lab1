@@ -1,0 +1,197 @@
+
+
+/* УНІВЕРСАЛЬНИЙ СЕЛЕКТОР */
+* {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    direction: ltr;
+    unicode-bidi: normal;
+}
+
+/*  СЕЛЕКТОР ТЕГУ ТА ФОНОВІ ВЛАСТИВОСТІ */
+body {
+    color: #2d241e;
+    background-color: #f5f0eb;
+    background-image: url("фон.jpg");
+    background-attachment: scroll;
+    background-position: center bottom;
+    font-family: Arial, sans-serif;
+    line-height: normal;
+    margin: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* КОНТЕКСТНИЙ СЕЛЕКТОР  */
+div section p {
+    line-height: 22px;
+    vertical-align: baseline;
+}
+
+/* СЕЛЕКТОР ДІТЕЙ */
+.content-wrapper > section {
+    margin: 20px auto;
+}
+
+[data-role] {
+    padding-bottom: 15px;
+}
+
+[data-role="main-content"] {
+    min-height: 400px;
+    height: auto;
+}
+
+a[rel~="external"] {
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: #8c684d;
+
+
+}
+
+
+a:link {
+    color: #003366;
+    text-decoration: none;
+}
+
+.nav-menu p > a:first-child {        /* меню навігації <Головна(Про фірму) жирний шрифт>  */
+    font-weight: bold;
+}
+
+.catalog-section > .product-card:last-child {
+    border-right-style: solid;
+    border-right-width: 3px;     
+    border-right-color: #003366; 
+    padding-right: 15px;
+}
+
+input:enabled {                          /* поля для вводу тексту */
+    border-left-color: #003366;
+    border-left-style: solid;
+    visibility: visible;
+}
+
+input:disabled {
+    border-left-color: #ccc;
+    border-left-style: dotted;
+    background-color: #e0e0e0;
+}
+
+article:not(.news-post) {
+    background-color: #fcf9f6;                    
+}
+
+section p:last-of-type img {
+    vertical-align: top;
+}
+
+
+p::first-letter {
+    font-size: 110%;
+    color: #003366;
+}
+
+article p::first-line {
+    color: red;
+}
+
+
+.site-header {
+    border-top-width: thin;                      /* шапка Інтернет-магазин «PC_STORE */
+    border-top-color: #003366;
+    border-style: solid;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.product-card, .card {               /* блоку 1.1. Процесор Intel Core i3-1310F */
+    border-width: thin;
+    border-bottom-width: thin;
+    border-top-width: thin;
+    border-left-color: #003366;
+    border-top-color: #003366;
+    border-right-color: #003366;
+    border-left-style: none;
+    border-style: solid;
+    border-right-style: solid;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+.sidebar-news {
+    float: left;
+    width: 30%;
+    position: relative;
+    z-index: auto;
+    min-height: 200px;
+    height: 100%;
+}
+
+.main-column {                      
+    float: none;
+    clear: both;                        
+    position: static;
+    overflow: visible;
+}
+
+.hidden-block {
+    visibility: hidden;
+    overflow: scroll;
+}
+
+.clipped-element {
+    position: absolute;
+    clip: rect(0px, 60px, 200px, 0px);   /* обрізання  */
+}
+
+.css-table-container {       /* для побудови таблиці */
+    display: table;
+    width: 100%;
+}
+
+.css-table-col {
+    display: table-column;
+}
+
+.css-table-caption {
+    display: table-caption;
+    vertical-align: text-top;
+}
+
+.css-table-header {
+    display: table-header-group;
+}
+
+.css-table-body {
+    display: table-row-group;
+}
+
+.css-table-row {
+    display: table-row;
+}
+
+.css-table-cell {
+    display: table-cell;
+    border: 1px solid #888; 
+    padding: 8px 15px;      
+}
+
+.inline-element {
+    display: inline;
+    vertical-align: sub;  /* нижній регустр */
+}
+
+.bidi-override-demo {
+    unicode-bidi: bidi-override;
+    direction: ltr;                   /* можна міняти напрямок читання сллова */
+}
