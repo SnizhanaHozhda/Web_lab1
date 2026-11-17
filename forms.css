@@ -1,0 +1,185 @@
+
+@page {
+  size: portrait;
+  marks: cross;
+}
+
+body {
+  font-family: 'Gill Sans', 'Lucida Sans Unicode', 'Lucida Sans Regular', Cochin, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  background: #f5f0eb;
+  color: #2d241e;
+}
+h1 {
+  color: #6b4c35;
+  font-weight: 700;
+  font-stretch: semi-expanded;
+  text-shadow: #cdb9a5 1px 1px 2px;     
+}
+legend {
+  font-family: Cochin, serif;
+  font-weight: 700;
+  font-variant: small-caps;
+  font-stretch: extra-condensed;
+  color: #6b4c35;
+}
+input, textarea, select, button {
+  font-family: monospace;
+  font-size: 14px;
+}
+em {
+  font-style: normal;
+  font-weight: 700;
+  color: #b00020;
+}
+.sys {
+  font: icon;                           
+}
+
+label {
+  word-spacing: 2px;
+}
+legend {
+  text-decoration: underline;
+}
+.buttons {
+  text-align: right;
+}
+code {
+  white-space: pre;                        
+}
+p, textarea {
+  widows: 2;
+  orphans: 3;
+}
+
+
+nav {
+  background: #6b4c35;
+  padding: 10px 20px;
+}
+nav a {
+  color: #fff;
+  margin-right: 18px;
+  text-decoration: none;
+}
+nav a:hover { text-decoration: underline; }
+.content {
+  max-width: 760px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+.hint { font-size: 14px; color: #6b5a4c; }
+
+
+.box {
+  border: 1px solid #6b4c35;
+  border-radius: 6px;
+  background: #fffdf9;
+  padding: 10px 16px 14px;
+  margin-bottom: 18px;
+}
+.row { margin: 8px 0; }
+.lbl {
+  display: inline-block;
+  width: 190px;
+  vertical-align: top;
+  margin: 6px 6px 6px 0;
+}
+.chk {
+  display: block;
+  margin: 4px 0;
+}
+.fld {
+  width: 260px;
+  padding: 5px 8px;
+  border: 1px solid #8c684d;
+  border-radius: 4px;
+  background: #fff;
+  box-sizing: border-box;
+}
+textarea.fld { width: 300px; height: 90px; vertical-align: top; }
+input[type=range].fld { width: 180px; padding: 0; }
+input[type=checkbox].fld-chk { width: auto; margin-right: 6px; }
+input[type=file].fld { width: 300px; }
+
+input:focus, textarea:focus, select:focus {
+  background: #f6ecde;
+  outline: 2px solid #c9a27c;
+}
+input:focus:invalid, textarea:focus:invalid, select:focus:invalid {
+  border-color: #b00020;
+  background: #fde8ea;
+  outline: 2px solid #e57373;
+}
+input:focus:valid, textarea:focus:valid, select:focus:valid {
+  border-color: #2e7d32;
+  background: #e8f5e9;
+  outline: 2px solid #81c784;
+}
+
+progress.bar { width: 220px; height: 16px; vertical-align: middle; }
+meter { width: 220px; vertical-align: middle; }
+
+button,
+input[type=submit] {
+  background: #6b4c35;
+  color: #fff;
+  border: 0;
+  padding: 9px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover,
+input[type=submit]:hover { background: #4a3525; }
+.img-btn { vertical-align: middle; margin-left: 8px; cursor: pointer; }
+
+/* keygen вилучено зі стандарту, показуємо його підпис через CSS */
+keygen::before {
+  content: "[тег keygen браузери не підтримують]";
+  color: #777;
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  .lbl { display: block; width: auto; }
+  .fld, textarea.fld, input[type=file].fld { width: 100%; }
+}
+
+
+@media print {
+  #fs-extra { page-break-before: always; }
+  #fs-final { page-break-after: always; }
+  nav, .buttons { display: none; }
+}
+
+h1 {
+  azimuth: center;
+  speak: normal;
+  speak-numeral: continuous;
+}
+legend {
+  volume: 80%;
+  cue-before: url(sound/ding.wav);
+  cue-after: url(sound/ding.wav);
+}
+label {
+  voice-family: male;
+  speech-rate: x-slow;
+  pitch-range: 50;
+  stress: 50;
+}
+.hint {
+  speech-rate: x-fast;
+  azimuth: far-right;
+  elevation: below;
+}
+.box {
+  cue: url(sound/in.wav) url(sound/out.wav);
+  play-during: url(sound/music.mp3) mix repeat;
+}
+.sys {
+  volume: silent;
+}

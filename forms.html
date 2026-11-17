@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Гожда Сніжана">
+  <meta name="description" content="Форми замовлення та пошуку товарів інтернет-магазину PC_STORE">
+  <title>Форми — PC_STORE</title>
+  <link rel="stylesheet" type="text/css" href="forms.css">
+</head>
+<body>
+
+<nav id="top-nav">
+  <a href="menu.html" style="font-weight:bold;">☰ Меню</a>
+  <a href="#order-form">Замовлення</a>
+  <a href="#search-form">Пошук товару</a>
+</nav>
+
+<main class="content">
+
+  
+
+  <form id="order-form" action="#" method="get" target="_self" title="Форма замовлення" lang="uk" dir="ltr">
+
+    <!-- ---------- Контактні дані ---------- -->
+    <fieldset id="fs-contact" class="box" dir="ltr">
+      <legend id="lg-contact" lang="uk" style="text-decoration:underline;">Контактні дані</legend>
+
+      <p class="row">
+        <label style="cursor:pointer;" for="cname" class="lbl" title="Прізвище та ім'я кирилицею через пробіл">Ім'я та прізвище <em>*</em></label>
+        <input type="text" id="cname" name="cname" class="fld" dir="ltr" size="30" required autofocus
+               pattern="[А-Яа-яІіЇїЄєҐґ'’\-]{2,20} [А-Яа-яІіЇїЄєҐґ'’\-]{2,20}"
+               title="Ім'я і прізвище українськими літерами через пробіл, наприклад: Петро Степанович"
+               placeholder="Петро Степанович" style="letter-spacing:0.5px;">
+      </p>
+
+      <p class="row">
+        <label style="cursor:pointer;" for="phone" class="lbl" title="Номер у форматі +380XXXXXXXXX">Телефон <em>*</em></label>
+        <input type="tel" id="phone" name="phone" class="fld" dir="ltr" size="20" required
+               pattern="\+380[0-9]{9}"
+               title="Формат: +380 і ще 9 цифр, наприклад +380501234567"
+               placeholder="+380501234567" style="letter-spacing:0.5px;">
+      </p>
+    </fieldset>
+
+    <!-- ---------- Замовлення ---------- -->
+    <fieldset id="fs-order" class="box" dir="ltr">
+      <legend id="lg-order" lang="uk" style="text-decoration:underline;">Замовлення</legend>
+
+      <p class="row">
+        <label style="cursor:pointer;" for="product" class="lbl" title="Оберіть товар зі списку">Товар <em>*</em></label>
+        <select id="product" name="product" class="fld" required>
+          <option value="">— оберіть товар —</option>
+          <optgroup id="og-parts" label="Комплектуючі" dir="ltr" title="Комплектуючі для ПК">
+            <option value="i5">Intel Core i5-12400F</option>
+            <option value="rtx4060">NVIDIA GeForce RTX 4060</option>
+            <option value="ddr4">Kingston FURY 16 ГБ DDR4</option>
+            <option value="ssd">Samsung 990 EVO Plus 2 ТБ</option>
+          </optgroup>
+          <optgroup id="og-periph" label="Периферія" dir="ltr" title="Периферійні пристрої">
+            <option value="monitor">Монітор 24" IPS</option>
+            <option value="keyboard">Клавіатура механічна</option>
+            <option value="mouse">Миша ігрова</option>
+          </optgroup>
+        </select>
+      </p>
+
+      <p class="row">
+        <label style="cursor:pointer;" for="stock" class="lbl" title="Скільки відсотків складу заповнено товаром">Рівень запасів на складі</label>
+        <meter id="stock" min="0" max="100" low="30" high="70" optimum="90" value="72" lang="uk" title="Рівень запасів на складі, %">72%</meter>
+        <span class="hint">72%</span>
+      </p>
+
+      <p class="row">
+        <label style="cursor:pointer;" for="qty" class="lbl" title="Від 1 до 10 штук">Кількість <em>*</em></label>
+        <input type="number" id="qty" name="qty" class="fld" dir="ltr" min="1" max="10" step="1" value="1" required>
+      </p>
+
+      <p class="row">
+        <label style="cursor:pointer;" for="warranty" class="lbl" title="Додаткова гарантія: 0, 12, 24 або 36 місяців">Додаткова гарантія</label>
+        <input type="range" id="warranty" name="warranty" class="fld" min="0" max="36" step="12" value="12">
+        <span class="hint">0, 12, 24 або 36 міс.</span>
+      </p>
+
+      <p class="row">
+        <label style="cursor:pointer;" for="ddate" class="lbl" title="Від 11.11.2026 до 31.03.2027">Бажана дата доставки <em>*</em></label>
+        <input type="date" id="ddate" name="ddate" class="fld" dir="ltr" min="2026-11-11" max="2027-03-31" required>
+      </p>
+
+      <p class="row">
+        <label style="cursor:pointer;" for="mmonth" class="lbl" title="Коли плануєте наступну покупку">Місяць наступної покупки</label>
+        <input type="month" id="mmonth" name="mmonth" class="fld" dir="ltr" min="2026-11" max="2027-12">
+      </p>
+
+      <p class="row">
+        <label style="cursor:pointer;" for="city" class="lbl" title="Оберіть місто зі списку підказок">Місто доставки <em>*</em></label>
+        <input type="text" id="city" name="city" class="fld" dir="ltr" size="25" list="cities" required
+               pattern="[А-Яа-яІіЇїЄєҐґ'’\- ]{2,30}" title="Назва міста українськими літерами" placeholder="Почніть вводити місто">
+        <datalist id="cities" title="Міста доставки" dir="ltr" lang="uk">
+          <option value="Київ">
+          <option value="Львів">
+          <option value="Харків">
+          <option value="Одеса">
+          <option value="Дніпро">
+          <option value="Чернівці">
+        </datalist>
+      </p>
+    </fieldset>
+
+    <!-- ---------- Додатково ---------- -->
+    <fieldset id="fs-extra" class="box" dir="ltr">
+      <legend id="lg-extra" lang="uk" style="text-decoration:underline;">Додатково</legend>
+
+      <p class="row">
+        <span class="lbl">Додаткові послуги</span>
+        <label style="cursor:pointer;" class="chk" title="Складання комп'ютера з комплектуючих">
+          <input type="checkbox" name="svc" value="build" class="fld-chk"> Збірка ПК (800 грн)
+        </label>
+        <label style="cursor:pointer;" class="chk" title="Встановлення операційної системи">
+          <input type="checkbox" name="svc" value="os" class="fld-chk"> Установка Windows (500 грн)
+        </label>
+        <label style="cursor:pointer;" class="chk" title="Подарункова упаковка">
+          <input type="checkbox" name="svc" value="gift" class="fld-chk"> Подарункова упаковка (150 грн)
+        </label>
+      </p>
+
+      <p class="row">
+        <label style="cursor:pointer;" for="photo" class="lbl" title="Файли JPG, PNG або PDF">Чек або фото (необов'язково)</label>
+        <input type="file" id="photo" name="photo" class="fld" accept=".jpg,.jpeg,.png,.pdf">
+      </p>
+
+      <p class="row">
+        <label style="cursor:pointer;" for="address" class="lbl" title="Вулиця, будинок, квартира">Адреса та побажання <em>*</em></label>
+   
+        <textarea id="address" name="address" form="order-form" class="fld" title="Адреса доставки та побажання"
+                  dir="ltr" rows="4" cols="40" maxlength="200" required autofocus
+                  placeholder="вул. Хрещатик, 1, кв. 5. Подзвоніть за годину до доставки"></textarea>
+        <span class="hint">Не більше 200 символів</span>
+      </p>
+
+      <p class="row">
+        <label style="cursor:pointer;" for="key" class="lbl" title="Ключ для захищеної передачі даних">Ключ шифрування</label>
+ 
+        <keygen id="key" name="key" class="fld" style="color:#777;" autofocus dir="ltr" challenge="pcstore2026"></keygen>
+      </p>
+    </fieldset>
+
+
+    <fieldset id="fs-final" class="box" dir="ltr">
+      <legend id="lg-final" lang="uk" style="text-decoration:underline;">Підтвердження</legend>
+
+      <p class="row">
+        <label style="cursor:pointer;" class="chk" title="Без згоди форму відправити не можна">
+          <input type="checkbox" id="agree" name="agree" value="yes" class="fld-chk" required>
+          Погоджуюсь з умовами замовлення <em>*</em>
+        </label>
+      </p>
+
+      <p class="row">
+        <label style="cursor:pointer;" for="step" class="lbl" title="На якому етапі оформлення ви зараз">Етап оформлення</label>
+        <progress id="step" class="bar" max="4" value="2">крок 2 з 4</progress>
+        <span class="hint">крок 2 з 4</span>
+      </p>
+
+      <p class="buttons">
+        <button type="reset" id="btn-reset" name="reset" value="reset" form="order-form" formtarget="_self">Очистити форму</button>
+        <input type="submit" id="btn-send" value="Відправити інформацію" formaction="#" formenctype="multipart/form-data">
+        <input type="image" id="btn-img" class="img-btn" src="pictur.svg" alt="Відправити зображенням" height="40"
+               formaction="#" formenctype="multipart/form-data">
+      </p>
+    </fieldset>
+
+  </form>
+
+  <form id="search-form" action="#" method="get" target="_self" title="Пошук товару" lang="uk" dir="ltr">
+    <fieldset id="fs-search" class="box" dir="ltr">
+      <legend id="lg-search" lang="uk" style="text-decoration:underline;">Пошук товару в каталозі</legend>
+
+      <p class="row">
+        <label style="cursor:pointer;" for="q" class="lbl" title="Введіть частину назви товару">Назва товару <em>*</em></label>
+        <input type="text" id="q" name="q" class="fld" dir="ltr" size="25" list="catalog"
+               required maxlength="40" pattern=".{2,40}" title="Введіть від 2 до 40 символів" placeholder="наприклад, Intel">
+        <datalist id="catalog" title="Каталог товарів" dir="ltr" lang="uk">
+          <option value="Intel Core i5-12400F">
+          <option value="NVIDIA GeForce RTX 4060">
+          <option value="Kingston FURY 16 ГБ DDR4">
+          <option value="Samsung 990 EVO Plus 2 ТБ">
+          <option value="Монітор 24&quot; IPS">
+          <option value="Клавіатура механічна">
+          <option value="Миша ігрова">
+        </datalist>
+        <button type="submit" id="btn-find" name="find" value="find" form="search-form" formtarget="_self">Знайти</button>
+      </p>
+    </fieldset>
+  </form>
+
+
+  <p><a href="menu.html" style="font-weight:bold;">← Перейти до сторінки меню</a></p>
+
+</main>
+
+</body>
+</html>
