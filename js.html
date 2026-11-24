@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>PC_STORE</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f5f0eb; color: #2d241e; }
+    nav { background: #6b4c35; padding: 10px 20px; }
+    nav a { color: #fff; margin-right: 18px; text-decoration: none; }
+    .content { max-width: 960px; margin: 20px auto; padding: 0 20px; }
+    section { background: #fff; padding: 20px; margin-bottom: 25px; border: 1px solid #d6c7b7; border-radius: 6px; }
+    h1, h2 { color: #6b4c35; cursor: pointer; transition: 0.3s; }
+    button { background: #6b4c35; color: #fff; border: none; padding: 8px 16px; cursor: pointer; border-radius: 4px; }
+    button:hover { background: #523927; }
+    textarea { width: 100%; max-width: 500px; margin-top: 8px; padding: 8px; }
+    .gallery { display: flex; gap: 20px; margin-top: 15px; }
+    .gallery img { width: 180px; height: 130px; object-fit: cover; border: 2px solid #8c684d; transition: 0.3s; cursor: pointer; }
+    #status-bar {
+      position: fixed; bottom: 15px; right: 15px; background: #2d241e; color: #fff;
+      padding: 10px 16px; border-radius: 6px; font-size: 13px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+
+
+<body onload="showEvent('Подія BODY onload: сторінку повністю завантажено!')"
+      onresize="showEvent('Подія BODY onresize: розмір вікна ' + window.innerWidth + 'x' + window.innerHeight)"
+      onoffline="alert('Подія BODY onoffline: пропав інтернет!')"
+      ononline="alert('Подія BODY ononline: інтернет відновлено!')"
+      onbeforeprint="alert('Подія BODY onbeforeprint: підготовка до друку')">
+
+  <nav>
+    <a href="menu.html">≡ Меню</a>
+  </nav>
+
+  <div id="status-bar">Журнал подій: очікування...</div>
+
+  <main class="content">
+    <!-- ЗАВДАННЯ 2 -->
+    <section>
+      <h1 onclick="styleH1(this)">Інтернет-магазин «PC_STORE» (клікни на мене)</h1>
+      <h2 ondblclick="styleH2(this)">Завдання 2: Інтерактивні заголовки (подвійний клік)</h2>
+      <p>
+        Спеціальна пропозиція: <b onmouseover="styleBoldOver(this)" onmouseout="styleBoldOut(this)">наведіть курсор на цей жирний текст</b> 
+        або <i onclick="styleItalic(this)">клікніть на цей курсив</i>.
+      </p>
+    </section>
+
+  
+    <section>
+      <h2>Завдання 3: Кількість форм на сторінці</h2>
+      <form id="formCountTask">
+        <button type="button" onclick="runTask()">Run Task</button><br>
+        <textarea id="task3Result" rows="2" readonly placeholder="Тут з'явиться кількість форм..."></textarea>
+      </form>
+    </section>
+
+
+    <section>
+      <h2>Завдання 4: Обробка подій миші для зображень</h2>
+      <div class="gallery">
+        <img src="https://placehold.co/300x200/6b4c35/fff?text=Процесор" alt="Процесор"
+             onmouseover="imgHover(this)" onmouseout="imgOut(this)">
+        
+        <img src="https://placehold.co/300x200/8c684d/fff?text=Відеокарта" alt="Відеокарта"
+             onclick="imgClick(this)">
+        
+        <img src="https://placehold.co/300x200/2d241e/fff?text=SSD+Диск" alt="SSD"
+             onmousedown="imgDown(this)" onmouseup="imgUp(this)">
+      </div>
+    </section>
+
+
+    <section>
+      <h2>Завдання 5 : Пошук слів на «ш» та закінченням «а»</h2>
+      <form id="regexForm">
+        <label for="inputText">Введіть текст для аналізу:</label><br>
+        <textarea id="inputText" rows="4">У нашому магазині є швидка доставка. На полиці лежить шапка, шина, машина та штани. Школа працює щодня.</textarea><br><br>
+        <button type="button" onclick="searchWords()">Пошук інформації</button><br>
+        <textarea id="regexResult" rows="3" readonly placeholder="Результат пошуку..."></textarea>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    function showEvent(msg) {
+      document.getElementById('status-bar').textContent = msg;
+      console.log(msg);
+    }
+
+    // --- Завдання 2 ---
+    function styleH1(el) {
+      el.style.color = '#b5382a';
+      el.style.textDecoration = 'underline';
+      showEvent('Подія onclick на <h1>: змінено колір і додано підкреслення');
+    }
+
+    function styleH2(el) {
+      el.style.backgroundColor = '#e6d9c8';
+      el.style.padding = '8px';
+      el.style.borderRadius = '4px';
+      showEvent('Подія ondblclick на <h2>: змінено фон');
+    }
+
+    function styleBoldOver(el) {
+      el.style.backgroundColor = '#6b4c35';
+      el.style.color = '#fff';
+      el.style.padding = '2px 5px';
+      showEvent('Подія onmouseover на <b>: виділено текст');
+    }
+
+    function styleBoldOut(el) {
+      el.style.backgroundColor = 'transparent';
+      el.style.color = 'inherit';
+      el.style.padding = '0';
+      showEvent('Подія onmouseout на <b>: стиль скинуто');
+    }
+
+    function styleItalic(el) {
+      el.style.color = '#1b6e32';
+      el.style.fontWeight = 'bold';
+      showEvent('Подія onclick на <i>: змінено колір і товщину шрифту');
+    }
+
+    // --- Завдання 3  ---
+    function runTask() {
+      const totalForms = document.forms.length;
+      const res = `Кількість форм на сторінці: ${totalForms}`;
+      document.getElementById('task3Result').value = res;
+      showEvent('Виконано Run Task: знайдено форм — ' + totalForms);
+    }
+
+    // --- Завдання 4 ---
+    function imgHover(img) {
+      img.style.transform = 'scale(1.08)';
+      img.style.borderColor = '#b5382a';
+      showEvent('Подія onmouseover на картинці: збільшення масштабу');
+    }
+
+    function imgOut(img) {
+      img.style.transform = 'scale(1)';
+      img.style.borderColor = '#8c684d';
+      showEvent('Подія onmouseout на картинці: стандартний розмір');
+    }
+
+    function imgClick(img) {
+      img.style.opacity = (img.style.opacity === '0.5') ? '1' : '0.5';
+      showEvent('Подія onclick на картинці: змінено прозорість');
+    }
+
+    function imgDown(img) {
+      img.style.boxShadow = '0 0 15px #6b4c35';
+      showEvent('Подія onmousedown на картинці: додано тінь');
+    }
+
+    function imgUp(img) {
+      img.style.boxShadow = 'none';
+      showEvent('Подія onmouseup на картинці: тінь прибрано');
+    }
+
+    function searchWords() {
+      const text = document.getElementById('inputText').value;
+      const regex = /(?:^|[^а-яіїєґА-ЯІЇЄҐ])(ш[а-яіїєґА-ЯІЇЄҐ]*а)(?=$|[^а-яіїєґА-ЯІЇЄҐ])/gi;
+      
+      const found = [];
+      let match;
+      while ((match = regex.exec(text)) !== null) {
+        found.push(match[1]);
+      }
+
+      const output = document.getElementById('regexResult');
+      if (found.length > 0) {
+        output.value = `Знайдено слів (${found.length}): ${found.join(', ')}`;
+      } else {
+        output.value = 'Слів, що починаються на «ш» та закінчуються на «а», не знайдено.';
+      }
+      showEvent('Виконано пошук за регулярним виразом ');
+    }
+  </script>
+
+</body>
+</html>
